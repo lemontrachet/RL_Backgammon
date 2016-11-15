@@ -29,7 +29,7 @@ class Game_Manager():
         x_moves = []
         y_moves = []
         while True:
-            #time.sleep(1)
+            #time.sleep(3)
             if turn % 2 != 0:
                 # x choose move
                 new_state = self.x.take_turn(self.board)
@@ -89,7 +89,7 @@ class Game_Manager():
                     with open('results.csv', 'a') as r:
                         r.write("{0},{1},{2},{3}\n".format(strftime(
                                      "%Y-%m-%d %H:%M:%S"), "y",
-                                     sum(self.x.q.values()), "v1.0"))
+                                     sum(self.x.q.values()), "v1.1"))
                     r.close()
                     break
                 else: # update q table
