@@ -108,7 +108,7 @@ class Player():
         print(self.name, "rolled", dice)
         first_die_moves = self.gen_moves(board.board, dice[0])
         fm = self.check_remaining(first_die_moves)
-        if fm != None: return fm
+        if fm != None: return tuple(fm)  # convert from np array
         second_die_moves = []
         for m in first_die_moves:
             second_die_moves.extend(self.gen_moves(m, dice[1]))
